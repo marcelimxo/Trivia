@@ -1,0 +1,50 @@
+body {
+    background-image: url("fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box, #resultados_caja {
+    background-color: aliceblue;
+    margin: 50px 50px !important;
+}
+
+h1 {font-family: 'Press Start 2P', cursive;
+    color: greenyellow;
+    text-shadow: 2px 2px blue;
+    box-sizing: content-box;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+#footer {
+  text-align: center;
+}
+
+.show {
+    display: block;
+}
+
+.ocultar,
+#deportes_resultados,
+#paises_resultados{
+    display: none;
+}
+
+/*efecto para que el titulo cambie de color*/
+h1:hover{
+    background-color: #FA1F67;
+}
+
+/*efecto para el boton inicial gire*/
+#btn:hover{
+    transition-duration: 1s;
+    transform: rotate(20deg);
+}
+
+/*efeto para que el boton finalizar gire*/
+
+#paises_resultados:hover,#deportes_resultados:hover{
+    transition-duration: 1s;
+    transform: rotate(20deg);
+} 

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivias DeMentes</title>
+    <!-- nuestra hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- document.querySelector('input[name="respuestas_dep1"]:checked')Fuente que vamos a utilizar -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Press+Start+2P" rel="stylesheet">
+    <!-- estilo de videojuego -->
+    <link href="https://unpkg.com/nes.css@2.1.0/css/nes.min.css" rel="stylesheet" />
+
+    <!-- Mi favicon -->
+    <link rel="shortcut icon" href="http://i1225.photobucket.com/albums/ee381/enix-directory/Pixels/minigif019.gif">
+
+</head>
+
+<body>
+    <h1>¡Trivias DeMentes!</h1>
+
+    <div class="box" id="trivia">
+        <div class="nes-container is-centered is-rounded">
+
+            <div id="bienvenida">
+
+                <h2>Bienvenidx, por favor ingresa tu nombre para empezar a jugar:</h2>
+
+                <label for="name">¿Cual es tu nombre? <input type="text" id="name" class="nes-input"
+                        placeholder="tu nombre"> </label> <br>
+                <button type="submit" id="btn" value="¡A jugar!" class="nes-btn is-success">¡A
+                    jugar!</button>
+
+            </div>
+
+            <div id="deportes" class="ocultar">
+                <h4> Deportes </h4>
+                <div id="pregunta_deportes1">
+                    <p>¿Quien es el campeón mundial y olimpico de 100m y 200m lisos?</p>
+                    <div class="respuestas">
+
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_dep1" value="1" />
+                            <span>Usain Bolt</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_dep1" value="0" />
+                            <span>Leonardo DiCaprio</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_dep1" value="0" />
+                            <span>Blake Butler</span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <div id="pregunta_deportes2" class="ocultar">
+
+                    <p>¿Cuántos jugadores hay en un equipo de futbol?</p>
+
+                    <div class="respuestas">
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_dep2" value="0" />
+                            <span>10</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_dep2" value="1" />
+                            <span>11</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_dep2" value="0" />
+                            <span>9</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div id="pregunta_deportes3" class="ocultar">
+
+                    <p>¿A cuantos metros debes estar para realizar paracaidismo?</p>
+
+                    <div class="respuestas">
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_dep3" value="1" />
+                            <span>5000mts - 2700mts</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_dep3" value="0" />
+                            <span>3000mts - 2000mts</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_dep3" value="0" />
+                            <span>6000mts - 3000mts</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <br>
+                <button type="button" class="nes-btn is-success" id="deportes_siguiente">Siguiente
+                </button>
+
+            </div>
+
+            <h3 id="final_deportes"></h3> <br>
+            <button type="button" class="nes-btn is-warning" onclick="finalizar()" id="deportes_resultados">Finalizar
+            </button>
+
+            <div id="paises" class="ocultar">
+                <h4> Paises </h4>
+                <div id="pregunta_paises1">
+                    <p>¿Varsovia es la capital de:?</p>
+                    <div class="respuestas">
+
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_preg1" value="0" />
+                            <span>Rusia</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_preg1" value="1" />
+                            <span>Polonia</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_preg1" value="0" />
+                            <span>Hungría</span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <div id="pregunta_paises2" class="ocultar">
+
+                    <p>¿Qué pais tiene forma de bota?</p>
+
+                    <div class="respuestas">
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_preg2" value="0" />
+                            <span>España</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_preg2" value="1" />
+                            <span>Italia</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_preg2" value="0" />
+                            <span>Francia</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div id="pregunta_paises3" class="ocultar">
+
+                    <p>¿En que pais se encuentra el famoso estadio de Wombley Arena?</p>
+
+                    <div class="respuestas">
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_preg3" value="0" />
+                            <span>Bulgaria</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_preg3" value="1" />
+                            <span>Londres - Reino Unido</span>
+                        </label> <br>
+                        <label>
+                            <input type="radio" class="nes-radio" name="respuestas_preg3" value="0" />
+                            <span>Eslovaquia</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <br>
+                <button type="button" class="nes-btn is-success" id="paises_siguiente">Siguiente
+                </button>
+            </div>
+
+            <h3 id="final_paises"></h3> <br>
+            <button type="button" class="nes-btn is-warning" onclick="finalizar()" id="paises_resultados">Finalizar
+            </button>
+
+        </div>
+    </div>
+
+    <div id="comienzo" class="box ocultar nes-container is-centered is-rounded">
+            <h3 id="saludo"></h3>
+
+            <div id="opciones">
+                <button id="tema1" class="nes-btn is-primary">Deportes</button>
+                <button id="tema2" class="nes-btn is-primary">Paises</button></div>
+        </div>
+
+    <div class="ocultar nes-container with-title is-centered is-rounded" id="resultados_caja">
+        <p class="title">Resultados</p>
+        <p id="resultados_finales"></p>
+         
+             <button id="volver" class="nes-btn is-primary">Volver a Jugar</button>
+         
+    </div>
+
+    <section class="message" id="footer">
+        <!-- Balloon -->
+        <div class="nes-balloon">
+            <p>Hecho por Marcelim<img
+                    src="https://66.media.tumblr.com/1c53ee8383e03adbdc9880bd24c0a80d/tumblr_inline_mgpg8iDlty1qdlkyg.gif">
+            </p>
+        </div>
+    </section>
+
+    <script src="trivia.js"></script>
+
+</body>
+
+</html>
